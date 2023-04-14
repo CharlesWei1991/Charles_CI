@@ -9,7 +9,7 @@ jobs:
     environment:
       FL_OUTPUT_DIR: /Users/biprogybank01/Desktop
       FASTLANE_LANE: first_lane
-      GYM_OUTPUT_NAME:makabaka
+      GYM_OUTPUT_NAME: makabaka
     steps:
       - checkout
       - macos/switch-ruby:
