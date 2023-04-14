@@ -10,12 +10,9 @@ jobs:
       FL_OUTPUT_DIR: output
       FASTLANE_LANE: test
     steps:
-      desc "Checkout"
       - checkout
-      desc "switch_ruby"
       - macos/switch-ruby:
           version: "system"
-      desc "bundle install"
       - run: bundle install
       - restore_cache
           key: 1-gems-{{checksum "Gemfile.lock"}}
