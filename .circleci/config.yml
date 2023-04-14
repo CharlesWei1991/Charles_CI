@@ -12,7 +12,7 @@ jobs:
     steps:
       - checkout
       - macos/switch-ruby
-          version: "system"
+          version: "2.7.2"
       - checkout
       - run: bundle install
 #      - restore_cache
