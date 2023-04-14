@@ -11,8 +11,8 @@ jobs:
       FASTLANE_LANE: test
     steps:
       - checkout
-#      - macos/switch-ruby
-#          version: "2.7.2"
+      - macos/switch-ruby:
+          version: "system"
       - run: bundle install
 #      - restore_cache
 #          key: 1-gems-{{checksum "Gemfile.lock"}}
