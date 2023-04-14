@@ -31,6 +31,6 @@ jobs:
 #          path: output/scan
 
 workflows:
-  build-test-workflows
+  build-test-workflows:
     jobs:
       - build-and-test
