@@ -5,7 +5,7 @@ orbs:
 jobs:
   build-and-test:
     macos:
-      xcode: 14.2.0
+      xcode: 14.3
     environment:
       FL_OUTPUT_DIR: output
       FASTLANE_LANE: second_lane
