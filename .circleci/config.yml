@@ -11,10 +11,10 @@ jobs:
       FASTLANE_LANE: test
     steps:
       - checkout
-#      - macos/switch-ruby
-#          version: "system"
-#      - checkout
-#      - run: bundle install
+      - macos/switch-ruby
+          version: "system"
+      - checkout
+      - run: bundle install
 #      - restore_cache
 #          key: 1-gems-{{checksum "Gemfile.lock"}}
 #      - run: bundle check || bundle install --path vendor/bundle --clean
@@ -32,6 +32,6 @@ jobs:
 #          path: output/scan
 
 workflows:
-  build-test-adhoc:
+  build-test
     jobs:
       - build-and-test
