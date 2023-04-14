@@ -27,6 +27,7 @@ platform :ios do
   
   lane :second_lane do
   desc "打个包包"
+  xcode_select("/Applications/Xcode 14.3/Xcode.app")
   gym(export_method: "development")
   end
 end
