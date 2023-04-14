@@ -7,8 +7,9 @@ jobs:
     macos:
       xcode: 14.2.0
     environment:
-      FL_OUTPUT_DIR: output
+      FL_OUTPUT_DIR: /Users/biprogybank01/Desktop
       FASTLANE_LANE: first_lane
+      GYM_OUTPUT_NAME:makabaka
     steps:
       - checkout
       - macos/switch-ruby:
