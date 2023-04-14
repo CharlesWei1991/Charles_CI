@@ -22,9 +22,9 @@ jobs:
           paths:
             - vendor/bundle
       - run: bundle exec pod install
-#      - run:
-#          name: Fastlane
-#          command: bundle exec fastlane $first_lane
+      - run:
+          name: Fastlane
+          command: bundle exec fastlane $first_lane
 #      - store_artifacts:
 #          path: output
 #      - store_test_results:
