@@ -27,6 +27,9 @@ platform :ios do
   
   lane :second_lane do
   desc "打个包包"
-  gym(export_method: "development")
+  gym(
+       export_method: "development"
+       xcode_path: "/Applications/Xcode-14.3.app"
+     )
   end
 end
