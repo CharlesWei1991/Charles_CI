@@ -8,7 +8,7 @@ jobs:
       xcode: 14.2.0
     environment:
       FL_OUTPUT_DIR: /Users/biprogybank01/Desktop
-      FASTLANE_LANE: first_lane
+      FASTLANE_LANE: second_lane
       GYM_OUTPUT_NAME: makabaka
     steps:
       - checkout
