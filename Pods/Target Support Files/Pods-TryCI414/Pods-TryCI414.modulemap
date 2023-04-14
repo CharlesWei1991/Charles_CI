@@ -1,0 +1,6 @@
+framework module Pods_TryCI414 {
+  umbrella header "Pods-TryCI414-umbrella.h"
+
+  export *
+  module * { export * }
+}

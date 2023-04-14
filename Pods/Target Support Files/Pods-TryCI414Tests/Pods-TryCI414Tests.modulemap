@@ -1,0 +1,6 @@
+framework module Pods_TryCI414Tests {
+  umbrella header "Pods-TryCI414Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
