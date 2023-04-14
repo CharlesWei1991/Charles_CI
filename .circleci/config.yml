@@ -10,25 +10,28 @@ jobs:
       FL_OUTPUT_DIR: output
       FASTLANE_LANE: test
     steps:
+      desc "Checkout"
       - checkout
+      desc "switch_ruby"
       - macos/switch-ruby:
           version: "system"
+      desc "bundle install"
       - run: bundle install
-#      - restore_cache
-#          key: 1-gems-{{checksum "Gemfile.lock"}}
-#      - run: bundle check || bundle install --path vendor/bundle --clean
-#      - save_cache:
-#          key: 1-gems-{{checksum "Gemfile.lock"}}
-#          paths:
-#            - vendor/bundle
-#      - run: bundle exec pod install
-#      - run:
-#          name: Fastlane
-#          command: bundle exec fastlane $first_lane
-#      - store_artifacts:
-#          path: output
-#      - store_test_results:
-#          path: output/scan
+      - restore_cache
+          key: 1-gems-{{checksum "Gemfile.lock"}}
+      - run: bundle check || bundle install --path vendor/bundle --clean
+      - save_cache:
+          key: 1-gems-{{checksum "Gemfile.lock"}}
+          paths:
+            - vendor/bundle
+      - run: bundle exec pod install
+      - run:
+          name: Fastlane
+          command: bundle exec fastlane $first_lane
+      - store_artifacts:
+          path: output
+      - store_test_results:
+          path: output/scan
 
 workflows:
   build-test-workflows:
